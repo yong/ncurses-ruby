@@ -1,3 +1,6 @@
+Gemfile*
+*.gem
+.rvmrc
 lib/ncurses.so
 pkg/
 tmp/

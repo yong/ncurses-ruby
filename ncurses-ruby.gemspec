@@ -8,7 +8,7 @@ SUMMARY = 'This wrapper provides access to the functions, macros, global variabl
            'of the ncurses library.  These are mapped to a Ruby Module named "Ncurses":  ' +
            'Functions and external variables are implemented as singleton functions of the Module Ncurses.'
 
-spec = Gem::Specification.new do |s|
+Gem::Specification.new do |s|
   s.name        = 'ncurses-ruby'
   s.version     = Ncurses::Ruby::VERSION
   s.platform    = Gem::Platform::RUBY
@@ -22,8 +22,4 @@ spec = Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.files         = Dir.glob("[A-Z]*") + Dir.glob("{examples,lib,ext}/**/*")
   s.extensions    = ['ext/ncurses/extconf.rb']
-end
-
-if $0 == __FILE__
-  Gem::Builder.new(spec).build
 end
